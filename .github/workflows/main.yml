@@ -24,8 +24,8 @@ jobs:
             #restore-keys: |
               #${{ runner.os }}-m2
       -  name: Run Maven
-         run: mvn --batch-mode --update-snapshots verify
-      -  run: mkdir staging && cp target/*.jar staging
+         run: mvn -B package --file pom.xml
+      
         #run: |
             #printf '{
               #"data_1": "Text data",
