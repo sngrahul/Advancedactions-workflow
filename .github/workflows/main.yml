@@ -24,7 +24,7 @@ jobs:
             #restore-keys: |
               #${{ runner.os }}-m2
       -  name: Run Maven
-         run: mvn -B package --file pom.xml
+         run: mvn -f package --file pom.xml
       
         #run: |
             #printf '{
