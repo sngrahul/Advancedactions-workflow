@@ -22,7 +22,7 @@ jobs:
             path: ~/.m2/repository
             key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
             restore-keys: |
-            ${{ runner.os }}-m2
+              ${{ runner.os }}-m2
       -  name: Run Maven
          run: mvn --batch-mode --update-snapshots verify
       -  run: mkdir staging && cp target/*.jar staging
