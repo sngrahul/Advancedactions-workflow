@@ -24,7 +24,7 @@ jobs:
             #restore-keys: |
               #${{ runner.os }}-m2
       -  name: Run Maven
-         run: mvn -f ./pom.xml package
+         run: mvn -f .github/workflows/pom.xml package
       
         #run: |
             #printf '{
